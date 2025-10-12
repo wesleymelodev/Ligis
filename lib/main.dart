@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Gerador de Sigilos',
+      title: 'Ligis - Sigil Generator',
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
 

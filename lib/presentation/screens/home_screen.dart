@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Escolha uma cor'),
+        title: const Text('Choose a color'),
         content: SingleChildScrollView(
           child: ColorPicker(
             pickerColor: pickerColor,
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (renderBox == null) {
       // Opcional: Mostrar uma mensagem de erro ao usuário se o canvas não for encontrado.
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Erro ao salvar imagem: área de desenho não encontrada.')),
+        const SnackBar(content: Text('Error saving image: Canvas not found.')),
       );
       return;
     }
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final base64Encoder = base64.encoder;
     final base64String = base64Encoder.convert(pngBytes);
     final anchor = html.AnchorElement(href: 'data:image/png;base64,$base64String')
-      ..setAttribute('download', 'sigilo.png')
+      ..setAttribute('download', 'sigil.png')
       ..style.display = 'none';
 
     html.document.body!.children.add(anchor);
@@ -104,13 +104,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Gerador de Sigilos'),
+        title: const Text('Ligis - Sigil Generator'),
         actions: [
           // Botão para trocar o tema
           IconButton(
             icon: Icon(isDarkMode ? Icons.light_mode_outlined : Icons.dark_mode_outlined),
             onPressed: widget.toggleTheme, // Chama a função passada do MyApp
-            tooltip: 'Mudar Tema',
+            tooltip: 'Change Theme',
           ),
           // Botão de Informação
           IconButton(
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Navigator.of(context).pushNamed(AboutScreen.routeName);
             },
-            tooltip: 'Sobre o App',
+            tooltip: 'About the App',
           ),
         ],
       ),
@@ -129,14 +129,14 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             CustomInputField(
               controller: _textController,
-              hintText: 'Digite sua intenção aqui...',
+              hintText: 'Enter your intention here...',
             ),
             const SizedBox(height: 16),
             Row(
               children: [
                 Expanded(
                   child: CustomButton(
-                    text: 'Gerar Sigilo',
+                    text: 'Generate',
                     onPressed: () {
                       // Ao gerar um novo sigilo, resete a cor customizada
                       if (_textController.text.trim().isEmpty) {
@@ -167,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: IconButton(
                       icon: const Icon(Icons.color_lens_outlined),
-                      tooltip: 'Mudar Cor',
+                      tooltip: 'Change Color',
                       onPressed: _showColorPicker,
                       color: _customColor ?? _sigilData!.color,
                     ),
@@ -184,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: IconButton(
                       icon: const Icon(Icons.save_alt_outlined),
-                      tooltip: 'Salvar Imagem',
+                      tooltip: 'Save Image',
                       onPressed: _saveImage,
                       color: Theme.of(context).primaryColor,
                     ),

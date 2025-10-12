@@ -2,15 +2,15 @@
 
 Sigil Generator.
 
-## O que são Sigilos?
+## What are Sigils?
 
-Um sigilo é um símbolo criado para um propósito mágico específico. 
-Ele é uma representação simbólica de um desejo ou intenção, 
-condensada em uma forma abstrata para que possa ser carregada pelo subconsciente.
+A sigil is a symbol created for a specific magical purpose.
+It is a symbolic representation of a desire or intention,
+condensed into an abstract form so that it can be carried by the subconscious.
 
-### Como este App Funciona
+### How This App Works
 
-1. Escreva sua intenção ou desejo no campo de texto.
-2. O aplicativo remove vogais e letras repetidas para criar a base do sigilo.
-3. Um hash criptográfico é gerado a partir dessa base, garantindo um padrão único.
-4. Usando um sistema de ângulos, distâncias e numerologia, o hash é traduzido em um desenho geométrico e uma cor específica, criando seu sigilo pessoal.
+1. Write your intention or wish in the text field.
+2. The app removes vowels and repeated letters to create the sigil base.
+3. A cryptographic hash is generated from this base, ensuring a unique pattern.
+4. Using a system of angles, distances, and numerology, the hash is translated into a geometric design and a specific color, creating your personal sigil.
