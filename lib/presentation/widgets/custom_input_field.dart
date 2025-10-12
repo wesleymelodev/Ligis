@@ -16,7 +16,6 @@ class CustomInputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // --- AQUI ESTÁ A CORREÇÃO ---
     // 1. Determina se o tema atual é escuro.
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
 

@@ -62,7 +62,7 @@ class SigilPainter extends CustomPainter {
     final paint = Paint()
       ..color = overrideColor ?? sigilData!.color // Usa a cor calculada pela nossa lógica
       ..style = PaintingStyle.stroke // Define que queremos desenhar linhas, não preencher formas
-      ..strokeWidth = 2.0 // A espessura da linha
+      ..strokeWidth = 3.0 // A espessura da linha
       ..strokeCap = StrokeCap.round // Deixa as pontas das linhas arredondadas
       ..strokeJoin = StrokeJoin.round; // Deixa as junções das linhas arredondadas
 

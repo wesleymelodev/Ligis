@@ -173,7 +173,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(width: 8), // Espaçamento entre os botões de ícone
-                  // --- NOVO BOTÃO DE SALVAR ---
                   Container(
                     decoration: BoxDecoration(
                       color: Theme.of(context).colorScheme.surface,
