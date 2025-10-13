@@ -1,11 +1,20 @@
 // lib/presentation/screens/about_screen.dart
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
   // Define um nome de rota estático para fácil acesso.
   static const String routeName = '/about';
+
+  Future<void> _launchURL() async {
+    final Uri url = Uri.parse('https://amzn.to/3JbbNv1'); // Substitua pelo link desejado
+    if (!await launchUrl(url)) {
+      // Se não conseguir abrir, pode mostrar um erro (opcional)
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +47,18 @@ class AboutScreen extends StatelessWidget {
             Text(
               '1. Write your intention or wish in the text field.\n\n 2. The app removes vowels and repeated letters to create the sigil base.\n\n 3. A cryptographic hash is generated from this base, ensuring a unique pattern.\n\n 4. Using a system of angles, distances, and numerology, the hash is translated into a geometric design and a specific color, creating your personal sigil.',
               style: Theme.of(context).textTheme.bodyLarge,
+            ),
+            const SizedBox(height: 16),
+            InkWell(
+              onTap: _launchURL, // Chama a função ao clicar
+              child: Text(
+                "Click here and discover how to use and activate your sigils.",
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor, // Usa a cor primária do tema
+                  decoration: TextDecoration.underline, // Adiciona um sublinhado
+                  decorationColor: Theme.of(context).primaryColor,
+                ),
+              ),
             ),
           ],
         ),
