@@ -31,12 +31,12 @@ class SigilGenerator {
     1: const Color(0xFFFF0000), // Vermelho: Energia e Início
     2: const Color(0xFFFFA500), // Laranja: Criatividade
     3: const Color(0xFFFFFF00), // Amarelo: Intelecto
-    4: const Color(0xFF008000), // Verde: Estabilidade
+    4: const Color(0xFF00FF00), // Verde: Estabilidade
     5: const Color(0xFF00FFFF), // Ciano: Mudança
     6: const Color(0xFF0000FF), // Azul: Harmonia
-    7: const Color(0xFF8A2BE2), // Roxo: Espiritualidade
-    8: const Color(0xFFFFC0CB), // Rosa: Amor/Realização
-    9: const Color(0xFF808080), // Cinza: Finalização
+    7: const Color(0xFF8500FF), // Roxo: Espiritualidade
+    8: const Color(0xFFFF00F4), // Rosa: Amor/Realização
+    9: const Color(0xFFFF0040), // Magenta: Finalização
   };
 
   /// 1. Limpa a frase: foca na estrutura retirando o que é redundante
