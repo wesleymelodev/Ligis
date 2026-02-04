@@ -9,7 +9,7 @@ class AboutScreen extends StatelessWidget {
   static const String routeName = '/about';
 
   Future<void> _launchURL() async {
-    final Uri url = Uri.parse('https://amzn.to/3JbbNv1'); // Substitua pelo link desejado
+    final Uri url = Uri.parse('https://ancrolyn.web.app/#/produtos/livros'); // Substitua pelo link desejado
     if (!await launchUrl(url)) {
       // Se não conseguir abrir, pode mostrar um erro (opcional)
       throw 'Could not launch $url';
